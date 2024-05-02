@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mike Dyer: Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class ="element">
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Mike Dyer's Personal Website</h1>
+      <p>Learn about me, my apprenticeship and my portfolio</p>
+    </div>
+  </section>
+
+  <main>
+    <body>
+      <body>
+
+        <h1>Contact Me</h1>
+      
+        <form id="contactForm" action="#" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name">
+      
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email">
+      
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+      
+          <button type="submit">Submit</button>
+        </form>
+      
+        <script>
+          document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var message = document.getElementById("message").value.trim();
+            var error = false;
+      
+            // Simple form validation
+            if (name === "") {
+              showError("name", "Please enter your name");
+              error = true;
+            } else {
+              hideError("name");
+            }
+      
+            if (email === "") {
+              showError("email", "Please enter your email");
+              error = true;
+            } else if (!validateEmail(email)) {
+              showError("email", "Please enter a valid email address");
+              error = true;
+            } else {
+              hideError("email");
+            }
+      
+            if (message === "") {
+              showError("message", "Please enter your message");
+              error = true;
+            } else {
+              hideError("message");
+            }
+      
+            // If no errors, submit the form
+            if (!error) {
+              // Here you can handle the form submission
+              alert("Form submitted successfully!");
+              document.getElementById("contactForm").reset(); // Reset the form
+            }
+          });
+      
+          function showError(field, message) {
+            var errorElement = document.getElementById(field + "Error");
+            if (errorElement) {
+              errorElement.textContent = message;
+              errorElement.style.display = "block";
+            }
+          }
+      
+          function hideError(field) {
+            var errorElement = document.getElementById(field + "Error");
+            if (errorElement) {
+              errorElement.textContent = "";
+              errorElement.style.display = "none";
+            }
+          }
+      
+          function validateEmail(email) {
+            // Simple email validation regex
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+          }
+        </script>
+
+
+
+  <footer>
+    <p>&copy; 2024 Mike Dyer</p>
+  </footer>
+
+</body>
+</html>

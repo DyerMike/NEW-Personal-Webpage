@@ -28,27 +28,28 @@
   
   nav ul li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none ;
   }
   
   /* Hero section styles */
   .hero {
-    background-image: 'images/background.jpeg';
-    background-size: cover;
-    background-position: center;
     color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 100px 0;
+    background-color: whitesmoke; /* Missing semicolon */
+    text-align: center; /* Colon instead of semicolon */
+    padding: 0; /* Colon instead of semicolon */
   }
   
   .hero-content {
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto;
+    background-color: whitesmoke
   }
   
   /* Main section styles */
   main {
     padding: 50px 0;
+    background-color: whitesmoke
+    
   }
   
   /* Section styles */
@@ -66,10 +67,33 @@
   }
   /* CSS */
 .element {
-  background-image: url('images/background.jpeg');
+  background-image: url('/images/background.jpeg');
   background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 100px 0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between photos */
+}
+
+.photo {
+  flex: 1 1 200px; /* Adjust width of photos as needed */
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.artist {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 200px; /* Adjust width of artists as needed */
+  background-color: #f0f0f0;
+  padding: 20px;
+  
 }
