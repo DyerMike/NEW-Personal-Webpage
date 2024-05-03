@@ -67,7 +67,7 @@
   }
   /* CSS */
 .element {
-  background-image: url('/images/background.jpeg');
+  background-image: url('images/background.jpeg');
   background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
