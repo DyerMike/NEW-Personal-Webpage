@@ -91,6 +91,7 @@
 }
 .artist {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   flex: 1 1 200px; /* Adjust width of artists as needed */
   background-color: #f0f0f0;
@@ -99,13 +100,12 @@
 }
 .contact-box {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #f0f0f0;
   padding: 20px;
-  transition: transform 0.3s ease; /* Add transition for smooth movement */
+  
 }
 
-.contact-box:hover {
-  transform: translateX(100%); /* Move the box out of the way */
-}
+
