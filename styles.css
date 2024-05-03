@@ -97,3 +97,15 @@
   padding: 20px;
   
 }
+.contact-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.contact-box:hover {
+  transform: translateX(100%); /* Move the box out of the way */
+}
